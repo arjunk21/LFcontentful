@@ -15,22 +15,22 @@ class CourseTemplate extends React.Component {
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+          <Helmet title={`${course.title} | ${siteTitle}`} />
           <div className={heroStyles.hero}>
-            <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} />
+            <Img className={heroStyles.heroImage} alt={course.title} fluid={course.heroImage.fluid} />
           </div>
           <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
+            <h1 className="section-headline">{course.title}</h1>
             <p
               style={{
                 display: 'block',
               }}
             >
-              {post.publishDate}
+              {course.publishDate}
             </p>
             <div
               dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
+                __html: course.body.childMarkdownRemark.html,
               }}
             />
           </div>
