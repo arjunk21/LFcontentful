@@ -16,10 +16,6 @@ export default ({ course }) => (
         __html: article.description.childMarkdownRemark.html,
       }}
     />
-    {course.tags.map(tag => (
-      <p className={styles.tag} key={tag}>
-        {tag}
-      </p>
-    ))}
+    
   </div>
 )
