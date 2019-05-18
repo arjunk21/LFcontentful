@@ -39,4 +39,39 @@ exports.createPages = ({ graphql, actions }) => {
       })
     )
   })
+return new Promise((resolve, reject) => {
+    const course = path.resolve('./src/templates/course.js')
+    resolve(
+      graphql(
+        `
+          {
+            allContentfulCourse {
+              edges {
+                node {
+                  title
+                  slug
+                }
+              }
+            }
+          }
+          `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
+        }
+
+        const posts = result.data.allContentfulCourse.edges
+        posts.forEach((post, index) => {
+          createPage({
+            path: `/course/${post.node.slug}/`,
+            component: course,
+            context: {
+              slug: post.node.slug
+            },
+          })
+        })
+      })
+    )
+  })
 }
