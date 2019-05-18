@@ -17,6 +17,9 @@ export default ({ course }) => (
       }}
     />
     {course.tags.map(tag => (
-      
+      <p className={styles.tag} key={tag}>
+        {tag}
+      </p>
+    ))}
   </div>
 )
