@@ -30,7 +30,7 @@ class CourseTemplate extends React.Component {
             </p>
             <div
               dangerouslySetInnerHTML={{
-                __html: course.body.childMarkdownRemark.html,
+                __html: course.lesson.childMarkdownRemark.html,
               }}
             />
           </div>
