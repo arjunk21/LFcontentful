@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
     )
   })
 return new Promise((resolve, reject) => {
-    const course = path.resolve('./src/templates/course.js')
+    const courses = path.resolve('./src/templates/course.js')
     resolve(
       graphql(
         `
@@ -61,13 +61,13 @@ return new Promise((resolve, reject) => {
           reject(result.errors)
         }
 
-        const posts = result.data.allContentfulCourse.edges
-        posts.forEach((post, index) => {
+        const courses = result.data.allContentfulCourse.edges
+        courses.forEach((course, index) => {
           createPage({
-            path: `/course/${post.node.slug}/`,
+            path: `/course/${course.node.slug}/`,
             component: course,
             context: {
-              slug: post.node.slug
+              slug: course.node.slug
             },
           })
         })

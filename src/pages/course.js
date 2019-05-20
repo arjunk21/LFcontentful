@@ -6,10 +6,10 @@ import styles from './blog.module.css'
 import Layout from "../components/layout"
 import CoursePreview from '../components/course-preview'
 
-class Index extends React.Component {
+class CourseIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulCourse.edges')
+    const courses = get(this, 'props.data.allContentfulCourse.edges')
 
     return (
       <Layout location={this.props.location} >
@@ -19,12 +19,12 @@ class Index extends React.Component {
             Course
           </div>
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
+            <h2 className="section-headline">Recent Course</h2>
             <ul className="course-list">
-              {posts.map(({ node }) => {
+              {courses.map(({ node }) => {
                 return (
                   <li key={node.slug}>
-                    <CoursePreview article={node} />
+                    <CoursePreview course={node} />
                   </li>
                 )
               })}
@@ -36,10 +36,10 @@ class Index extends React.Component {
   }
 }
 
-export default Index
+export default CourseIndex
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query CourseIndexQuery {
     site {
       siteMetadata {
         title
