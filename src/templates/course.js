@@ -30,7 +30,7 @@ class CourseTemplate extends React.Component {
             </p>
             <div
               dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
+                __html: course.description.childMarkdownRemark.html,
               }}
             />
           </div>
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
           ...GatsbyContentfulFluid_tracedSVG
         }
       }
-      body {
+      description {
         childMarkdownRemark {
           html
         }
