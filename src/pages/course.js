@@ -4,27 +4,27 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styles from './course.module.css'
 import Layout from "../components/layout"
-import ArticlePreview from '../components/course-preview'
+import CoursePreview from '../components/course-preview'
 
 class CourseIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const course = get(this, 'props.data.allContentfulCourse.edges')
+    const posts = get(this, 'props.data.allContentfulCourse.edges')
 
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
           <div className={styles.hero}>
-            Courses
+            Blog
           </div>
           <div className="wrapper">
-            <h2 className="section-headline">Recent Course</h2>
+            <h2 className="section-headline">Recent Courses</h2>
             <ul className="course-list">
-              { course.map(({ node }) => {
+              {course.map(({ node }) => {
                 return (
                   <li key={node.slug}>
-                    <CoursePreview course={node} />
+                    <ArticlePreview course={node} />
                   </li>
                 )
               })}
