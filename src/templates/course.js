@@ -9,7 +9,7 @@ import heroStyles from '../components/hero.module.css'
 
 class CourseTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulCourse')
+    const course = get(this.props, 'data.contentfulCourse')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
