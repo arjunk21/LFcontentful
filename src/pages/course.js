@@ -24,7 +24,7 @@ class CourseIndex extends React.Component {
               {courses.map(({ node }) => {
                 return (
                   <li key={node.slug}>
-                    <CoursePreview course={node} />
+                    <CoursePreview courses={node} />
                   </li>
                 )
               })}
