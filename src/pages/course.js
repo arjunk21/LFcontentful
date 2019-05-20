@@ -6,7 +6,7 @@ import styles from './course.module.css'
 import Layout from "../components/layout"
 import CoursePreview from '../components/course-preview'
 
-class CourseIndex extends React.Component {
+class BlogIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulCourse.edges')
@@ -36,10 +36,10 @@ class CourseIndex extends React.Component {
   }
 }
 
-export default CourseIndex
+export default BlogIndex
 
 export const pageQuery = graphql`
-  query CourseIndexQuery {
+  query BlogIndexQuery {
     site {
       siteMetadata {
         title
