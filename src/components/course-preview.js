@@ -6,11 +6,11 @@ import styles from './course-preview.module.css'
 
 export default ({ course }) => (
   <div className={styles.preview}>
-    <Img alt="" fluid={course.heroImage.fluid} />
+    <Img alt="" fluid={article.heroImage.fluid} />
     <h3 className={styles.previewTitles}>
-      <Link to={`/course/${course.slug}`}>{course.title}</Link>
+      <Link to={`/course/${article.slug}`}>{article.title}</Link>
     </h3>
-    <small>{course.publishDate}</small>
+    <small>{article.publishDate}</small>
     <p
       dangerouslySetInnerHTML={{
         __html: article.description.childMarkdownRemark.html,
