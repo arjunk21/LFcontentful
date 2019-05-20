@@ -6,7 +6,7 @@ import styles from './course-preview.module.css'
 
 export default ({ course }) => (
   <div className={styles.preview}>
-    <Img alt="" fluid={course.heroImage.fluid} />
+    
     <h3 className={styles.previewTitles}>
       <Link to={`/course/${course.slug}`}>{course.title}</Link>
     </h3>
