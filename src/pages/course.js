@@ -9,7 +9,7 @@ import CoursePreview from '../components/course-preview'
 class CourseIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const courses = get(this, 'props.data.allContentfulCourse.edges')
+    const posts = get(this, 'props.data.allContentfulCourse.edges')
 
     return (
       <Layout location={this.props.location} >
@@ -21,7 +21,7 @@ class CourseIndex extends React.Component {
           <div className="wrapper">
             <h2 className="section-headline">Recent Course</h2>
             <ul className="course-list">
-              {course.map(({ node }) => {
+              {posts.map(({ node }) => {
                 return (
                   <li key={node.slug}>
                     <CoursePreview course={node} />
