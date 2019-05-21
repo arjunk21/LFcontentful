@@ -8,7 +8,7 @@ export default ({ course }) => (
   <div className={styles.preview}>
     
     <h3 className={styles.previewTitles}>
-      <Link to={`/course/${.slug}`}>{course.title}</Link>
+      <Link to={`/course/${course.node.slug}`}>{course.title}</Link>
     </h3>
     <small>{course.publishDate}</small>
     <p
