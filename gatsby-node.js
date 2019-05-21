@@ -64,10 +64,10 @@ return new Promise((resolve, reject) => {
         const courses = result.data.allContentfulCourse.edges
         courses.forEach((course, index) => {
           createPage({
-            path: `/course/${course.node.slug}/`,
+            path: `edge.node.slug`,
             component: course,
             context: {
-              slug: course.node.slug
+              slug: edge.node.slug
             },
           })
         })
