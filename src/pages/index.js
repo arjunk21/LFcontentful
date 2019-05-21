@@ -30,18 +30,6 @@ class RootIndex extends React.Component {
               })}
             </ul>
           </div>
-<div className="wrapper">
-            <h2 className="section-headline">Recent Course</h2>
-            <ul className="course-list">
-              {blog.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <CoursePreview course={node} />
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
         </div>
       </Layout>
     )
