@@ -21,10 +21,10 @@ class CourseIndex extends React.Component {
           <div className="wrapper">
             <h2 className="section-headline">Recent Course</h2>
             <ul className="course-list">
-              {courses.map(({ node }) => {
+              {courses.map(({ course }) => {
                 return (
-                  <li key={node.slug}>
-                    <CoursePreview courses={node} />
+                  <li key={course.slug}>
+                    <CoursePreview course={node} />
                   </li>
                 )
               })}
