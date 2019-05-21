@@ -21,7 +21,7 @@ class CourseIndex extends React.Component {
           <div className="wrapper">
             <h2 className="section-headline">Recent Course</h2>
             <ul className="course-list">
-              {courses.map(({ node }) => {
+              {course.map(({ node }) => {
                 return (
                   <li key={node.slug}>
                     <CoursePreview course={node} />
