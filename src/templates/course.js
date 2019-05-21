@@ -15,7 +15,7 @@ class CourseTemplate extends React.Component {
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+          <Helmet title={`${course.title} | ${siteTitle}`} />
           <div className={heroStyles.hero}>
             <Img className={heroStyles.heroImage} alt={course.title} fluid={course.heroImage.fluid} />
           </div>
