@@ -64,7 +64,7 @@ return new Promise((resolve, reject) => {
         const posts = result.data.allContentfulCourse.edges
         posts.forEach((post, index) => {
           createPage({
-            path: `/course/${post.node.slug}/`,
+            path: `/courses/${post.node.slug}/`,
             component: course,
             context: {
               slug: post.node.slug

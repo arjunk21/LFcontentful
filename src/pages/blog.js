@@ -15,6 +15,7 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
+	  <Hero data={author.node} />
           <div className={styles.hero}>
             Blog
           </div>

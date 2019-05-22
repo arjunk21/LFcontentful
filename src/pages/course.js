@@ -13,10 +13,10 @@ class CourseIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
+        <div style={{ background: '#f6f6f6' }}>
           <Helmet title={siteTitle} />
           <div className={styles.hero}>
-            Course
+            Courses To Learn
           </div>
           <div className="wrapper">
             <h2 className="section-headline">Recent Course</h2>
