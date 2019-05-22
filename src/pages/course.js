@@ -57,18 +57,8 @@ export const pageQuery = graphql`
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-	 lessons{
-        ...on ContentfulLesson{
-	title
-	slug
-	} 
-	}
-        }
+          shortDescription
+	 }
       }
     }
   }
