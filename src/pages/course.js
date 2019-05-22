@@ -52,8 +52,7 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "MMMM Do, YYYY")
           tags
-	  lessons
-          heroImage {
+	  heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid_tracedSVG
             }
@@ -63,6 +62,13 @@ export const pageQuery = graphql`
               html
             }
           }
+	 lessons{
+        ...on ContentfulLesson{
+	title
+	slug
+	module
+	} 
+	}
         }
       }
     }
