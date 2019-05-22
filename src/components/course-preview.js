@@ -6,7 +6,7 @@ import styles from './course-preview.module.css'
 
 export default ({ course }) => (
   <div className={styles.preview}>
-    
+    <Img alt="" fluid={course.heroImage.fluid} />
     <h3 className={styles.previewTitles}>
       <Link to={`/course/${course.slug}`}>{course.title}</Link>
     </h3>
@@ -16,7 +16,9 @@ export default ({ course }) => (
         __html: course.shortDescription,
       }}
     />
-
+     {course.tags.map(tag => (
+      <p className={styles.tag} key={tag}>
+        {tag}
     
   </div>
 )
