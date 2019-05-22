@@ -13,7 +13,7 @@ export default ({ course }) => (
     <small>{course.publishDate}</small>
     <p
       dangerouslySetInnerHTML={{
-        __html: course.description.childMarkdownRemark.html,
+        __html: course.shortDescription,
       }}
     />
 
