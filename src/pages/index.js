@@ -36,7 +36,7 @@ class RootIndex extends React.Component {
               {course.map(({ node }) => {
                 return (
                   <li key={node.slug}>
-                    <CoursePreview course={node} />
+                    <ArticlePreview article={node} />
                   </li>
                 )
               })}
