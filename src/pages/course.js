@@ -66,7 +66,6 @@ export const pageQuery = graphql`
         ...on ContentfulLesson{
 	title
 	slug
-	module
 	} 
 	}
         }
